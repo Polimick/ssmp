@@ -1,0 +1,89 @@
+
+html, body { 
+    font-family: 'Roboto Condensed', sans-serif; 
+    background: #eeeeee; 
+    margin: 0;
+    max-width: 100%;
+} 
+  
+h1.titleh1 { 
+    margin: 50px;
+    font-size: 100px;
+}
+.body {
+    margin: 50px;
+}
+
+.p {
+    font-size: 30px;
+}
+
+.head {
+    margin: 50px;
+}
+
+
+.text {
+    max-width: 100%;
+    font-size: 20px;
+}
+
+.tt1 {
+    font-size: 80px;
+}
+
+.tt2 {
+    font-size: 50px;
+}
+
+.m-1 {
+    margin-top:1px;
+    margin-bottom: 1px;
+}
+
+.table {
+    margin-left: 50px;
+}
+
+.text-1 {
+    font-size: 30px;
+}
+
+.money-1 {
+    width: 600px;
+    height: 200px;
+    background-color: red;
+    margin: 20px;
+}
+
+.c {
+    font-size: 80px;
+}
+
+.b {
+    font-size: 110px;
+}
+
+.people-body {
+    display: flex;
+}
+
+a.titlec {
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+a.titlec:hover {
+    background-size: 100% 2px;
+}
+
+.er {
+    font-size: 50px;
+    border-bottom: 5px dashed black;
+    padding: 15px;
+}
