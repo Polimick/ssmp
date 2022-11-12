@@ -9,5 +9,6 @@ urlpatterns = [
     path('article/<int:article_id>', views.detail, name = 'detail'),
     path('article/<int:article_id>/leave_comment', views.leave_comment, name = 'leave_comment'),
     path('article/<int:article_id>/delete_comment', views.leave_comment, name = 'delete_comment'),
-    path('party/<str:slug>', views.all_article_party, name="all_article_party")
+    path('party/<str:slug>', views.all_article_party, name="all_article_party"),
+    path('city/<str:slug>', views.all_article_city, name="all_article_city"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

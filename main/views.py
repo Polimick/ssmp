@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Article, Comment, Party
+from .models import Article, Comment, Party, City
 from django.http import Http404, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.models import User
@@ -22,13 +22,19 @@ def detail(reques, article_id):
     latest_comments_list = a.comment_set.order_by('-id')[:10]
 
     b = a.party.all()[0]
+    c = a.city.all()[0]
 
-    return render(reques, 'main/detail.html', {'article': a, 'article_party': b, 'latest_comments_list': latest_comments_list})
+    return render(reques, 'main/detail.html', {'article': a, 'article_party': b, 'article_city': c, 'latest_comments_list': latest_comments_list})
 
 def all_article_party(request, slug):
     s = Party.objects.get(slug__iexact=slug)
     a = Article.objects.all()
     return render(request, 'main/party.html', {'party': s, 'article': a})
+
+def all_article_city(request, slug):
+    s = City.objects.get(slug__iexact=slug)
+    a = Article.objects.all()
+    return render(request, 'main/city.html', {'city': s, 'article': a})
 
 def leave_comment(request, article_id):
     try:
