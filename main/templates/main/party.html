@@ -1,7 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{article.art_title}}{% endblock title %}
+{% block content%}
 
-
-
-<h1>Post with "{{party.title}}"</h1>
+<h1>Люди связанные с партией "{{party.title}}":</h1>
 {% for article in party.Article.all %}
-    {{article.art_title}}
-{% endfor %}
+    <div class="strana"><a href="{% url 'main:detail' article.id %}" class="titlec c">{{article.art_title}}</a></div>
+{% endfor %} 
+
+{% endblock content %}

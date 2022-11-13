@@ -1,19 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{article.art_title}}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content%}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Современная независимая политическая энциклопедия</title>
-    <link rel="stylesheet" href="{% static 'index/css/body.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
+
     <div class="osn">
-        <div class="title"><h1 class="titleh1"> <a href="/" class="titlec b">Современная независимая политическая энциклопедия </a>    </h1> <div class="money"></div></div>
         <div class="head">
             <p class="text">Этот сайт - это проект, который призван стать независимой площадкой для развития политической молодежи.
                 Если вы хотите добавить на платформу какие либо знания, то прошу писать в ЛС ВК. Создателем проекта является Гольцман Никита Романович.
@@ -28,5 +20,5 @@
         </div>
         <div class="footer"></div>
     </div>
-</body>
-</html>
+
+{% endblock content %}

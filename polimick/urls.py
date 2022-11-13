@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
+handler404 = 'polimick.views.view_404'
 urlpatterns = [
     path('', include('index.urls')),
     path('admin/', admin.site.urls),

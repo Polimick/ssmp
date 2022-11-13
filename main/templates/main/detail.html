@@ -1,51 +1,29 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Современная независимая политическая энциклопедия (ЧЕЛОВЕК)</title>
-    <link rel="stylesheet" href="{% static 'news/css/body.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="osn">
-        <div class="title"><h1 class="titleh1"> <a href="index.html" class="titlec b">Современная независимая политическая энциклопедия</a>    </h1> <div class="money"></div></div>
-        <div class="head">
-            <!-- <p class="strana tt1">ГОЛЬЦМАН НИКИТА РОМАНОВИЧ</p> -->
-        </div>
-        <div class="body">
-            <div class="d">
-               <div class="strana"><h1 class="tt1">{{article.art_title}}</h1></div>
-               <div class="people-body">
-                   <div class="img-persone"><img src="{{ MEDIA_URL }}{{ article.image.url }}" alt="{{article.art_title}}" height="500px" width="500px"></div>
-                   <div class="table">
-                        <p class="tt2"> <b>Карьера</b> </p>
-                        <p class="tt2 m-1">{{article.karera_3}}</p>
-                        <p class="tt2 m-1">{{article.karera_2}}</p>
-                        <p class="tt2 m-1">{{article.karera_1}}</p>
-                        <p class="tt2 m-1">{{article_party}}</p>
-                        <p class="tt2 m-1">{{article_city}}</p>
-                   </div>
-               </div>
-                
-            </div>
-            <div class="d">
-                <div class="strana"><h1 class="tt1">Информация о личности</h1></div>
-                 <div class="p">
-                     <p>{{article.art_content|safe}} <em>{{article.pub_date}}</em></p>
-                 </div> 
-             </div>
+{% extends "base.html" %}
+{% block title %}{{article.art_title}}{% endblock title %}
+{% block content%}
 
-        </div>
-        <div class="footer"></div>
+<div class="d">
+<div class="strana"><h1 class="tt1">{{article.art_title}}</h1></div>
+<div class="people-body">
+    <div class="img-persone"><img src="{{ MEDIA_URL }}{{ article.image.url }}" alt="{{article.art_title}}" height="500px" width="500px"></div>
+    <div class="table">
+            <p class="tt2"> <b>Карьера</b> </p>
+            <p class="tt2 m-1">{{article.karera_3}}</p>
+            <p class="tt2 m-1">{{article.karera_2}}</p>
+            <p class="tt2 m-1">{{article.karera_1}}</p>
+            <p class="tt2 m-1">{{article_party}}</p>
+            <p class="tt2 m-1">{{article_city}}</p>
     </div>
-</body>
-</html>
-
+</div>
+    
+</div>
+<div class="d">
+    <div class="strana"><h1 class="tt1">Информация о личности</h1></div>
+    <div class="p">
+        <p>{{article.art_content|safe}} <em>{{article.pub_date}}</em></p>
+    </div> 
+</div>
+{% endblock content %}
 
 
 

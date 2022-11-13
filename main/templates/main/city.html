@@ -1,4 +1,9 @@
-<h1>Post with "{{city.title}}"</h1>
-{% for article in party.City.all %}
-    {{article.art_title}}
+{% extends "base.html" %}
+{% block title %}{{article.art_title}}{% endblock title %}
+{% block content%}
+
+<h1>Люди связанные с городом "{{city.title}}":</h1>
+{% for article in city.City.all %}
+    <div class="strana"><a href="{% url 'main:detail' article.id %}" class="titlec c">{{article.art_title}}</a></div>
 {% endfor %}
+{% endblock content %}

@@ -1,2 +1,0 @@
-Django~=3.2.10
-Django-grappelli~=3.0.3

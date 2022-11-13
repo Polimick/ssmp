@@ -5,8 +5,8 @@ from django.utils import timezone
 # Create your models here.
 class Article(models.Model):
     art_title = models.CharField('Название статьи', max_length = 200)
-    party = models.ManyToManyField("Партия", related_name="Article")
-    city = models.ManyToManyField("Город", related_name="City")
+    party = models.ManyToManyField("Party", related_name="Article")
+    city = models.ManyToManyField("City", related_name="City")
     art_content = models.TextField('Текст статьи')
     karera_1 = models.CharField('Первый шаг в карьерной лестнице', max_length = 200, blank=True)
     karera_2 = models.CharField('Второй шаг в карьерной лестнице', max_length = 200, blank=True)
