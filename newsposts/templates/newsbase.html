@@ -6,19 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Списки Молодых Политиков | {% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'news/css/body.css' %}">
+    <link rel="stylesheet" href="{% static 'news/css/body.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="osn">
-        <div class="title"><h1 class="titleh1"> <a href="http://127.0.0.1:8000/" class="titlec b">Списки Молодых Политиков</a></h1><div class="money"></div></div>
-        <div class="head">
-            <p class="text">{% block header %}{% endblock header %}</p>
-        </div>
-        <div class="body">
-          {% block content%}{% endblock content %}
+        <div class="title"><h1 class="titleh1"> <a href="http://127.0.0.1:8000/" class="titlec b">Списки Молодых Политиков</a></h1></div>
+        <div class="centre">
+            <div class="head">
+                <p class="text">{% block header %}{% endblock header %}</p>
+            </div>
+            <div class="body">
+            {% block content%}{% endblock content %}
+            </div>
         </div>
         <div class="footer"></div>
     </div>

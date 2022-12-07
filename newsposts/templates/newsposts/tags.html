@@ -1,0 +1,10 @@
+{% extends "newsbase.html" %}
+{% block title %}{{article.title}}{% endblock title %}
+{% block content%}
+
+<h1>Новости связанные с тегом - "{{tags.title}}":</h1>
+{% for article in tags.Article.all %}
+    <div class="strana"><a href="{% url 'newsposts:detail' article.id %}" class="titlec c">{{article.art_title}}</a></div>
+{% endfor %} 
+
+{% endblock content %}

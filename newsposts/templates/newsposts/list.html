@@ -1,0 +1,25 @@
+{% extends "newsbase.html" %}
+{% block title %}{{article.art_title}}{% endblock title %}
+{% block header %}Для поиска по странице нажмите - <b>crtl + f</b>{% endblock header %}
+{% block content%}
+
+
+
+        {% if articles_list %}
+            {% for a in articles_list %}
+            <div class="newsposts flex">
+                <div class="e0">
+                    <img src="{{ MEDIA_URL }}{{ a.image.url }}" alt="{{article.art_title}}" height="200px" width="200px">
+                </div>
+                <div class="e1">
+                    <div class="strana"><a href="{% url 'newsposts:detail' a.id %}" class="titlec c-1">{{a.art_title}}</a></div>
+                    <div class="text">{{a.preview | safe}}</div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            Статьи не найдены (((
+        {% endif %}
+
+        <div class="footer"></div>
+{% endblock content %}

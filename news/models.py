@@ -13,3 +13,6 @@ class Article(models.Model):
     class Meta:
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
+
+    def __str__(self):
+        return f"{self.art_content}"

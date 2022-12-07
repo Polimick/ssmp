@@ -24,6 +24,7 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('news/', include('news.urls')),
     path('person/', include('main.urls')),
+    path('p/', include('newsposts.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
